@@ -20,7 +20,7 @@ images.forEach((image) => {
   html = images
     .map(
       ({ url, alt }) =>
-        `<li class='gallery__item'><img class="gallery__img" src=${url} alt=${alt} width="500"></li>`
+        `<li class='gallery__item'><img src=${url} alt=${alt} width="500"></li>`
     )
     .join("");
 });
