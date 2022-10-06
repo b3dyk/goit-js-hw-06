@@ -5,6 +5,7 @@ inputRef.addEventListener("blur", (event) => {
   const inputLength = event.currentTarget.value.length;
 
   if (inputLength < attributeValue) {
+    inputRef.classList.remove("valid");
     return inputRef.classList.add("invalid");
   }
 
@@ -12,7 +13,7 @@ inputRef.addEventListener("blur", (event) => {
   return inputRef.classList.add("valid");
 });
 
-// =================================================================================
+// Другий варіант виконання=================================================================================
 
 // inputRef.addEventListener("blur", (event) => {
 //   const attributeValue = event.currentTarget.getAttribute("data-length");
