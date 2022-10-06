@@ -3,15 +3,33 @@ const decrementBtnRef = document.querySelector("[data-action=decrement]");
 const incrementBtnRef = document.querySelector("[data-action=increment]");
 const valueRef = document.querySelector("#value");
 
-const increment = () => {
-  counterValue += 1;
-  return (valueRef.innerText = counterValue);
-};
-
-const decrement = () => {
+const onDecrease = () => {
   counterValue -= 1;
-  return (valueRef.innerText = counterValue);
+  valueRef.innerText = counterValue;
 };
 
-decrementBtnRef.addEventListener("click", decrement);
-incrementBtnRef.addEventListener("click", increment);
+const onIncrease = () => {
+  counterValue += 1;
+  valueRef.innerText = counterValue;
+};
+
+// =====================================================
+
+// const valueToText = () => {
+//   valueRef.innerText = counterValue;
+// };
+
+// const onDecrease = () => {
+//   counterValue -= 1;
+//   valueToText();
+// };
+
+// const onIncrease = () => {
+//   counterValue += 1;
+//   valueToText();
+// };
+
+// =====================================================
+
+decrementBtnRef.addEventListener("click", onDecrease);
+incrementBtnRef.addEventListener("click", onIncrease);
