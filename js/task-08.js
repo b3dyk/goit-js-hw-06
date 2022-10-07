@@ -4,26 +4,26 @@ loginFormRef.addEventListener("submit", (event) => {
   event.preventDefault();
 
   // 1-й варіант виконання (по умовам)=================================================
-  const form = event.target.elements;
+  const { email, password } = event.target.elements;
   const dataToSend = {};
 
   switch ("") {
-    case form.email.value:
-      form.email.style.border = "2px solid red";
+    case email.value:
+      email.style.border = "2px solid red";
       alert("Будь ласка, введіть email");
       break;
 
-    case form.password.value:
-      form.password.style.border = "2px solid red";
+    case password.value:
+      password.style.border = "2px solid red";
       alert("Будь ласка, введіть пароль");
       break;
 
     default:
-      form.email.style.border = "1px solid black";
-      form.password.style.border = "1px solid black";
+      email.style.border = "1px solid black";
+      password.style.border = "1px solid black";
 
-      dataToSend[form.email.name] = form.email.value;
-      dataToSend[form.password.name] = form.password.value;
+      dataToSend[email.name] = email.value;
+      dataToSend[password.name] = password.value;
 
       console.log(dataToSend);
 
